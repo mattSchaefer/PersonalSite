@@ -3,10 +3,11 @@ import {Link} from 'react-router-dom';
 import SkillsPills from '../components/SkillsPills';
 export default function Projects(props){
     React.useEffect(()=>{
-
+        document.getElementById('projects-section').style.animation = "fadeIn linear .5s";
+        document.getElementById('projects-section').style.opacity = "1"
     },[])
     return(
-        <div className="projects-section">
+        <div className="projects-section" id="projects-section">
             <div className="projects-section-inner">
                 <span className="projects-header-container">
                     <h3 className="projects-header">Projects</h3>

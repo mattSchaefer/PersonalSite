@@ -12,9 +12,9 @@ export default function Header(props){
                 <HeaderAnimation />
             </div>
             <span className={'menu-bar'}>
-                <Link to="/about" className={'menu-item'} tabindex="0" >About</Link>
-                <Link to="/projects" className={'menu-item'} tabindex="0">Projects</Link>
-                <Link to="/skills" className={'menu-item'} tabindex="0">Skills</Link>
+                <Link to="/about" className={'menu-item'} tabIndex="0" >About</Link>
+                <Link to="/projects" className={'menu-item'} tabIndex="0">Projects</Link>
+                <Link to="/skills" className={'menu-item'} tabIndex="0">Skills</Link>
             </span>
         </div>
     );

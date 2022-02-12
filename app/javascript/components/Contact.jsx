@@ -64,6 +64,8 @@ export default class Contact extends React.Component{
                     requestPending: 'no',
                     requestResponse: json
                 })
+                document.getElementById('contact-done-verbiage').style.animation = "fadeIn linear .5s";
+                document.getElementById('contact-done-verbiage').style.opacity = "1"
             })
             .catch((e) => console.log(e))
         }
@@ -97,7 +99,7 @@ export default class Contact extends React.Component{
                 }
                 {
                     this.state.requestComplete == 'yes' && this.state.requestResponse.status == 200 && 
-                    <div>
+                    <div id="contact-done-verbiage">
                         <h4>Thanks for reaching out!</h4>
                         <p>I'll review your message and get back to you soon.</p>
                     </div>

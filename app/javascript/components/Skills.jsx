@@ -1,8 +1,12 @@
 import React from 'react';
 
 export default function Skills(props){
+    React.useEffect(() => {
+        document.getElementById('skills-section').style.animation = "fadeIn linear .5s";
+        document.getElementById('skills-section').style.opacity = "1"
+    },[])
     return(
-        <div className="skills-section">
+        <div className="skills-section" id="skills-section">
             <div className="skills-section-inner">
                 <span className="skills-header-container">
                     <h3 className="skills-header">Skills and Familiarities</h3>

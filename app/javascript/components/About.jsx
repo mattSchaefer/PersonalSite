@@ -2,8 +2,12 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 export default function About(props){
+    React.useEffect(()=>{
+        document.getElementById('about-component-container').style.animation = "fadeIn linear .5s";
+        document.getElementById('about-component-container').style.opacity = "1"
+    },[])
     return(
-        <div className="about-section flex">
+        <div className="about-section flex" id="about-component-container">
             <p className="about-para greet">
                 Hey there,
             </p>

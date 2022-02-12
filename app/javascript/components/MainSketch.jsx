@@ -67,18 +67,18 @@ export default class MainSketch extends React.Component{
             }
             showPoints(){
                 sketch.push();
-                sketch.stroke(20, 100, this.end.z);
+                sketch.stroke(20, 100, this.end.z-30);
                 sketch.strokeWeight(10)
                 sketch.point(this.start.x, this.start.y,this.start.z);
                 sketch.point(this.end.x, this.end.y, this.end.z);
                 sketch.pop();
             }
             animateVector(){
-                sketch.stroke(20, 100, this.end.z);
+                sketch.stroke(20, 100, this.end.z-30);
                 sketch.strokeWeight(20);
-                tempX = sketch.map(this.angle, 0, 750, this.start.x, this.end.x, 1);
-                tempY = sketch.map(this.angle, 0, 750, this.start.y, this.end.y, 1);
-                tempZ = sketch.map(this.angle, 0, 100, this.start.z, this.end.z, 1);
+                tempX = sketch.map(this.angle, 20, 750, this.start.x, this.end.x, 1);
+                tempY = sketch.map(this.angle, 20, 750, this.start.y, this.end.y, 1);
+                tempZ = sketch.map(this.angle, 20, 100, this.start.z, this.end.z, 1);
                 this.current = sketch.createVector(tempX, tempY, tempZ);
                 if(tempX == this.end.x && tempY == this.end.y && tempZ == this.end.z){
                     ready = true; 
@@ -87,7 +87,7 @@ export default class MainSketch extends React.Component{
                 this.angle += speed;
             }
             showVector(){
-                sketch.stroke(20, 100, this.end.z);
+                sketch.stroke(20, 100, this.end.z-30);
                 sketch.strokeWeight(20);
                 sketch.line(this.start.x, this.start.y, this.start.z, this.end.x, this.end.y, this.end.z);
             }
