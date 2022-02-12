@@ -22,6 +22,9 @@
     line-height: 1.2;
     font-size: 1.5rem;
 }
+input{
+    line-height: 2.2;
+}
  .right{padding-right: 1rem;}
  .left{padding-left: 1rem;}
  #about-component-container, #projects-section, #skills-section, #home-section,#contact-done-verbiage{opacity: 0;}
@@ -107,12 +110,15 @@
 }
 
 .skill-body{
-    width: 100%;
+    width: 95%;
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
 }
 .contact-submit-button{
     background: black;
