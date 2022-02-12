@@ -67,14 +67,14 @@ export default class MainSketch extends React.Component{
             }
             showPoints(){
                 sketch.push();
-                sketch.stroke(20, 100, this.end.z-30);
+                sketch.stroke(20, 130, this.end.z-30);
                 sketch.strokeWeight(10)
                 sketch.point(this.start.x, this.start.y,this.start.z);
                 sketch.point(this.end.x, this.end.y, this.end.z);
                 sketch.pop();
             }
             animateVector(){
-                sketch.stroke(20, 100, this.end.z-30);
+                sketch.stroke(20, 130, this.end.z-30);
                 sketch.strokeWeight(20);
                 tempX = sketch.map(this.angle, 20, 750, this.start.x, this.end.x, 1);
                 tempY = sketch.map(this.angle, 20, 750, this.start.y, this.end.y, 1);
@@ -87,7 +87,7 @@ export default class MainSketch extends React.Component{
                 this.angle += speed;
             }
             showVector(){
-                sketch.stroke(20, 100, this.end.z-30);
+                sketch.stroke(20, 130, this.end.z-30);
                 sketch.strokeWeight(20);
                 sketch.line(this.start.x, this.start.y, this.start.z, this.end.x, this.end.y, this.end.z);
             }
