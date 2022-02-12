@@ -16,6 +16,12 @@
  html{
      font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
  }
+ h4{
+    margin-bottom: .5rem;
+    font-weight: 500 !important;
+    line-height: 1.2;
+    font-size: 1.5rem;
+}
  .right{padding-right: 1rem;}
  .left{padding-left: 1rem;}
  #about-component-container, #projects-section, #skills-section, #home-section,#contact-done-verbiage{opacity: 0;}
@@ -357,6 +363,7 @@
 }
 .project-image-container{
     width: 33%;
+    margin-left: 1rem;
     /* border-right: 1px solid grey; */
 }
 .project-desc-container{
