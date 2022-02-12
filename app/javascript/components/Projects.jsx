@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import SkillsPills from '../components/SkillsPills';
 export default function Projects(props){
+    const ghostButtonV1 = {background: 'none',border: 'none',color: '#0d6efd', textDecoration: 'underline',}
     React.useEffect(()=>{
         document.getElementById('projects-section').style.animation = "fadeIn linear .5s";
         document.getElementById('projects-section').style.opacity = "1"
@@ -23,7 +24,7 @@ export default function Projects(props){
                                 <p>A p5.js-utilizing canvas element allows users to create and export "worms" (which are really png images consisting of a series of ellipses) once an account is created and verified via email address.  Verified users can save, delete, and export their own worms, and they can favorite or unfavorite worms created by other users. This application was built on Ruby on Rails and utilizes ReactJS, JWT, and many more javascript libraries, along with React-Redux for state management.</p>
                             </div>
                         </div>
-                        <a className="wormfarmlink" href="http://www.friendlywormfarm.com" target="_blank">visit friendlywormfarm.com</a>
+                        <a className="wormfarmlink" href="http://www.friendlywormfarm.com" target="_blank"><button style={ghostButtonV1}>visit friendlywormfarm.com</button></a>
                         <div className="project-footer">
                             <SkillsPills skills="Ruby on Rails,ReactJS,React-Redux,JWT,Rails Mailer,p5.js,ReCaptcha,Material-UI,Heroku,git" />
                         </div>

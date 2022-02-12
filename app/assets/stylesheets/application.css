@@ -42,12 +42,12 @@
      width: 50vw;
  }
  .menu-item{border-bottom: 2px solid transparent;font-weight: 500; text-decoration: none !important; color: black;}
- .menu-item:hover{
-     cursor: pointer;
-     color:grey;
-     border-bottom: 2px solid grey;
-     font-weight: 600;
-     transition: .2s ease-in;
+ .menu-item:hover, .header-link-ghostbutton:hover, .header-link-ghostbutton:focus{
+     cursor: pointer !important;
+     color:grey !important;
+     border-bottom: 2px solid grey !important;
+     font-weight: 600 !important;
+     transition: .2s ease-in !important;
 }
 .wormfarmlink, .coming-soon{
     position: relative;
