@@ -72,6 +72,16 @@ export default function Skills(props){
                     </div>
                     <div className="skill">
                         <div className="skill-body">
+                            <div className="skill-icon left p5-icon">
+
+                            </div>
+                            <div className="skill-desc right">
+                                p5.js
+                            </div>
+                        </div>
+                    </div>
+                    <div className="skill">
+                        <div className="skill-body">
                             <div className="skill-icon left angular-icon">
 
                             </div>
