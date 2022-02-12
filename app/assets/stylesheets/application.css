@@ -107,7 +107,6 @@
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
-    padding: 1rem;
 }
 .contact-submit-button{
     background: black;
