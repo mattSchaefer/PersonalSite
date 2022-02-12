@@ -512,4 +512,7 @@ input{
     .project-body{flex-direction: column;}
     .wormfarmlink{left: 10vw;}
     canvas{ width: 100vw !important; overflow-x: clip;}
+    .friendly-worm-farm-image{
+        background-size: 14rem;
+    }
 }
