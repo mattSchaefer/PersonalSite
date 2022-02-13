@@ -27,12 +27,14 @@ export default class MainSketch extends React.Component{
             sketch.createCanvas(750, 750, sketch.WEBGL);
             sketch.background(256);
             sketch.camera(-350,-550,-350)
-            sketch.noFill(0);
+            //sketch.noFill(0);
             sketch.stroke(250, 50, 100, 205);
             sketch.strokeWeight(5);
-            point_array.push(new Point3D(sketch.random(750), sketch.random(750), sketch.random(750)));
+            sketch.pointLight(0, 0, 0, -250, -250, -50);
+            point_array.push(new Point3D(sketch.random(750), sketch.random(750), sketch.random(750),1));
         }
         sketch.draw = () => {
+            sketch.pointLight(100, 100, 100, 250, 250, 50);
             sketch.background(256);
             for(var i=0; i<point_array.length; i++){
                 point_array[i].showPoints();
@@ -46,13 +48,22 @@ export default class MainSketch extends React.Component{
                 let prev = point_array[point_array.length-1];
                 if(point_array.length > 30)
                     point_array.shift();
-                point_array.push(new Point3D(prev.end.x, prev.end.y, prev.end.z));
+                point_array.push(new Point3D(prev.end.x, prev.end.y, prev.end.z, prev.end.axis_constant));
             }
         }
         class Point3D{
-            constructor(x,y,z){
+            constructor(x,y,z, last_axis_constant){
                 this.start = sketch.createVector(x,y,z);
                 var ran = Math.ceil(sketch.random(3));
+                if(ran == 1 && last_axis_constant == 1){
+                    ran = 3
+                }else if(ran == 2 && last_axis_constant == 2){
+                    ran = 1
+                }else if(ran == 3 && last_axis_constant == 3){
+                    ran = 2
+                }
+                this.axis_constant = ran
+
                 if(ran == 1){
                     this.end = sketch.createVector(x, y, sketch.random(750));
                 }
@@ -67,14 +78,14 @@ export default class MainSketch extends React.Component{
             }
             showPoints(){
                 sketch.push();
-                sketch.stroke(20, 130, this.end.z-30);
+                sketch.stroke(20, 170, this.end.z-30);
                 sketch.strokeWeight(10)
                 sketch.point(this.start.x, this.start.y,this.start.z);
                 sketch.point(this.end.x, this.end.y, this.end.z);
                 sketch.pop();
             }
             animateVector(){
-                sketch.stroke(20, 130, this.end.z-30);
+                sketch.stroke(20, 170, this.end.z-30);
                 sketch.strokeWeight(20);
                 tempX = sketch.map(this.angle, 20, 750, this.start.x, this.end.x, 1);
                 tempY = sketch.map(this.angle, 20, 750, this.start.y, this.end.y, 1);
@@ -87,7 +98,7 @@ export default class MainSketch extends React.Component{
                 this.angle += speed;
             }
             showVector(){
-                sketch.stroke(20, 130, this.end.z-30);
+                sketch.stroke(20, 170, this.end.z-30);
                 sketch.strokeWeight(20);
                 sketch.line(this.start.x, this.start.y, this.start.z, this.end.x, this.end.y, this.end.z);
             }
