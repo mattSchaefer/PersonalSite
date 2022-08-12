@@ -5,7 +5,7 @@ ruby '3.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
-gem 'sqlite3', '~> 1.4', group: :development
+gem 'sqlite3', '~> 1.4'
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 # Use Puma as the app server
