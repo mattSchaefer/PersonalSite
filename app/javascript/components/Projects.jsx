@@ -54,7 +54,7 @@ export default function Projects(props){
                                 <p>Ruby on Rails/ReactJS open survey.  I absolutely do not believe a hotdog to be a sandwich, but I am curious what the general public thinks about the matter.  I had originally built this application on the MEAN stack, but that was a while ago and the UI is a bit... dated :) so I'm re-doing it.  These days I'm more of a fan of Ruby, anyways.</p>
                             </div>
                         </div>
-                        <p className="coming-soon">coming soon!</p>
+                        <a className="wormfarmlink" href="http://isahotdogasandwich.dog" target="_blank"><button style={ghostButtonV1}>visit isahotdogasandwich.dog</button></a>
                         <div className="project-footer">
                             <SkillsPills skills="Ruby on Rails,ReactJS,JWT" />
                         </div>
