@@ -35,7 +35,7 @@ export default function Projects(props){
                                 💧
                             </div>
                             <div className="project-desc-container">
-                            <h4>HealthReminder++</h4>
+                            <h4>PostureCheck</h4>
                             <p>Ruby on Rails/ReactJS/JWT application. Sometimes to form a habbit, we just need a little simple matter-of-fact encouragement.  Users sign up to have daily reminders to mind their posture, drink water, take vitamins, exercise, etc.</p>
                             </div>
                         </div>
