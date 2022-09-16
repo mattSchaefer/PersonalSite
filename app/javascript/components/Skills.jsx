@@ -1,4 +1,5 @@
 import React from 'react';
+import MainSketch from './MainSketch'
 
 export default function Skills(props){
     React.useEffect(() => {
@@ -155,6 +156,9 @@ export default function Skills(props){
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="mainsketch-bg-container">
+                <MainSketch />
             </div>
         </div>
     )
