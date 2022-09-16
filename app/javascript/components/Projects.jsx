@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import SkillsPills from '../components/SkillsPills';
+import MainSketch from './MainSketch'
+
 export default function Projects(props){
     const ghostButtonV1 = {background: 'none',border: 'none',color: '#0d6efd', textDecoration: 'underline',}
     React.useEffect(()=>{
@@ -59,6 +61,9 @@ export default function Projects(props){
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="mainsketch-bg-container">
+                <MainSketch />
             </div>
         </div>
     )
