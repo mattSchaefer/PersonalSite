@@ -13,6 +13,15 @@
  *= require_tree .
  *= require_self
  */
+.mainsketch-bg-container{
+    width: 750px;
+    height: 750px;
+    position: fixed;
+    top: 10vh;
+    opacity: .1;
+    left: 25vw;
+    z-index: -1;
+}
  html{
      font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
  }
